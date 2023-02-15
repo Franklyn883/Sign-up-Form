@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
 }
 html{
   height: 100%;
@@ -11,10 +12,42 @@ body{
   height: 100%;
   color: white;
   display: flex;
-  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  }
+@font-face {
+  font-family:Norse-bold;
+  src: url("resources/Norse-Bold.otf") format("opentype")
 }
-
-.img-container{
+.right-side{
+  height: 100%;
+  ;
+  text-align: center;
+}
+.logo{
+  display: flex;
+  background-color: rgba(19, 18, 18, 0.699);
+  position:absolute;
+  top: 110px;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  font-family: Norse-Bold;
+  font-size: 60px;
+}
+.photo-credit{
+  position: absolute;
+  bottom: 5px;
+  left: 150px;
+}
+.photo-credit a{
+  text-decoration: none;
+  color: white;
+}
+.photo-credit a:hover{
+  color: green;
+}
+.right-side .img-container{
   height: 100vh;
   width: 40vw;
   background-image: url("resources/form-project.jpg"); /* The image used */
@@ -23,16 +56,97 @@ body{
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size:cover;
+
+
+  
 }
-.passage{
-  font-size: large;
+
+.sub-passage{
+  margin: 24px 0;
 }
-.passage-sub{
-  margin-top: 16px;
+.main-content{
+  margin: 24px;
 }
-.signup-form{
-  margin: 16px;
+.message{
+  font-size: 20px;
 }
-form{
+.form{
+  display:flex;
+  flex-direction: column;
+  background-color: rgb(6, 6, 6);
+  box-shadow: 0 10px 20px -2px rgb(22, 22, 22);
+  flex-wrap: wrap;
+  padding:16px;
+  margin: 12px 0;
+
+}
+.form-title{
+  font-size: 22px;
+ 
+}
+.user-details{
+
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 50vw;
+  height: 40vh;
+  font-size: 12px;
+  
+
+  
+}
+.user-details label{
   display: block;
+}
+.user-details input{
+  width:100%;
+  height: 30px;
+  border-radius: 6px;
+  padding-left:4px;
+  margin-top: 8px;
+  font-size: 14px;
+  outline: none;
+  background-color: rgb(34, 33, 33);
+  color: white;
+  border: none;
+  border: 1px grey solid;
+}
+.user-details input:hover{
+  background-color: white;
+  color: rgb(34, 33, 33);
+  border: 1px rgb(243, 235, 235) solid;
+}
+.form-btn button{
+  outline: none;
+  border: none;
+  padding:12px 20px;
+  margin: 12px 0;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: rgba(15, 228, 15, 0.747);
+  color: white;
+  border: 1px solid white;
+
+  
+}
+.form-btn button:hover{
+ 
+  background:rgba(21, 95, 21, 0.747) ;
+  border: 1px solid grey;
+}
+.log-in a{
+  text-decoration: none;
+  color: rgba(15, 228, 15, 0.747);
+}
+.log-in a:hover{
+  color: rgba(21, 95, 21, 0.747);
+}
+span{
+  font-size: 16px;
+  color:rgba(15, 228, 15, 0.747);
+}
+#error-message{
+  display: none;
 }

@@ -5,25 +5,79 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign-up Form</title>
+  
   <link rel="stylesheet" href="main.css">
+<script defer>
+  function validatePassword() {
+  var password = document.getElementById("password").value;
+  var confirmPassword = document.getElementById("confirm-password").value;
+
+  if (password != confirmPassword) {
+    alert("Passwords do not match.");
+    return false;
+  }
+  return true;
+
+}
+</script>
 </head>
 <body>
-    <div class="img-container">
+    <div class="right-side">
+      <div class="logo"><img src="resources/odin-lined.png" height="100px" width="auto"> ODIN</div>
+      <div class="img-container">
+        <div class="photo-credit">photo by Susan .H on <a href="https://unsplash.com/collections/510279/flamingos">unsplash</a></div>
+      </div>
     </div>
-    <div class="signup-form">
-      <p class="passage">This is not a real online service! You know you need something like this in your<br>
-      life to help you realize your deepest dreams. Sign up now to get started.</p>
-      <p class="passage-sub">You know you want to.</p>
-      <h3>Let's do this!</h3>
-      <form action="" method="post">
-        <label for="first-name">First Name</label><br>
-        <input type="text" id="first-name" name="first-name" placeholder="Frank">
-        
-        <label for="last-name">Last Name</label><br>
-        <input type="text" id="last-name" name="last-name" placeholder="Alimimian">
-      </form>
+    <div class="main-content">
+      <div class="message">
+        <p class="passage">This is not a real online service! You know you need something like this in your<br>
+        life to help you realize your deepest dreams. Sign up now to get started.</p>
+        <div class="sub-passage"><p>You know you want to.</p></div>
+      </div>
+      
+      
 
-    </div>
+      <form action="#" method="post">
+       <div class="form">
+        <p class="form-title">Let's do this!</p>
+        <div class="user-details">
+          <div class="input">
+            <label for="first-name">FIRST NAME<span> *</span></label>
+            <input type="text" id="first-name" name="first-name" placeholder="Enter your First Name" required>
+          </div>
+          <div class="input">
+            <label for="last-name">LAST NAME <span>*</span></label>
+            <input type="text" id="last-name" name="last-name" placeholder="Enter your Last Name" required>
+          </div>
+          <div class="input">
+            <label for="email">EMAIL<span>*</span></label>
+            <input type="email" id="email" name="email" placeholder="Enter a valid email" required>
+          </div> 
+          <div class="input">
+            <label for="phone-number">PHONE NUMBER</label>
+            <input type="tel" id="phone-number" name="phone-number" placeholder="Enter a valid number" maxlength="11" pattern='[0-9]{10}'>
+          </div>
+          <div class="input">
+            <label for="password">PASSWORD<span> *</span></label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'>
+          </div>
+          <div class="input">
+            <label for="confirm-password">CONFIRM PASSWORD<span> *</span></label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm password" pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'>
+          </div>
+        </div>
+        </div>
+
+        <div class="form-btn">
+          <button type="submit" onclick="validatePassword()">Create Account</button>
+        </div>
+        <div class="log-in">
+          <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+    </form>
+  </div>
+      
+    
 
 </body>
 </html>
